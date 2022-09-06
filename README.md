@@ -1,2 +1,1 @@
-# bios-611-project
-bios-611-project
+My interesting dataset is hotel demand dataset, which is a dataset I found on Kaggle and here is its link: https://www.kaggle.com/datasets/jessemostipak/hotel-booking-demand. My main target is to predict whether or not a booking is cancelled.
