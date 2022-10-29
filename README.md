@@ -16,5 +16,9 @@ You'll need Docker and the ability to run Docker as your current user.
 
 You'll need to build the container:
 ```{}
-docker image build -t 611-
+docker image build -t 611project
+```
+And we can run docker container using the following command:
+```{}
+docker run -v $(pwd):/home/rstudio -e PASSWORD=goodjob -p 8787:8787 -t 611project
 ```

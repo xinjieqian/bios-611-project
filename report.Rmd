@@ -1,0 +1,13 @@
+---
+title: "Report"
+author: "Xinjie Qian"
+date: "10/28/2022"
+output: pdf_document
+---
+
+Here are some plots for the City hotel vs Resort hotel:
+
+![city_hotel_vs_resort_hotel](./figures/city_hotel_vs_resort_hotel.png)
+
+
+![city_hotel_vs_resort_hotel_month](./figures/city_hotel_vs_resort_hotel_month.png)
