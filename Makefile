@@ -3,8 +3,8 @@
 
 clean:
 	rm -rf figures
-      	rm -rf derived_data
-      	rm -rf .created-dirs
+	rm -rf derived_data
+	rm -rf .created-dirs
 
 
 .created-dirs:
@@ -13,13 +13,10 @@ clean:
 	touch .created-dirs
 	
 
-derived_data/hotel_bookings_preprocessed.csv:\
-  .created-dirs pre-process.R source_data/hotel_bookings.csv
-	Rscript pre-process.R
+derived_data/hotel_bookings_preprocessed.csv: .created-dirs pre_process.R source_data/hotel_bookings.csv
+	Rscript pre_process.R
 
-figures/city_hotel_vs_resort_hotel.png\
-  figures/city_hotel_vs_resort_hotel_month.png:\
-    source_data/hotel_bookings.csv city_hotel_vs_resort_hotel.R derived_data/hotel_bookings_preprocessed.csv
+figures/city_hotel_vs_resort_hotel.png figures/city_hotel_vs_resort_hotel_month.png: source_data/hotel_bookings.csv city_hotel_vs_resort_hotel.R derived_data/hotel_bookings_preprocessed.csv
 	Rscript city_hotel_vs_resort_hotel.R
 
 Report.pdf:\
